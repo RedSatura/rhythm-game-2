@@ -1,11 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://eyw6dh3lq6lt"]
 
-[ext_resource path="res://scenes/conductor/conductor.gd" type="Script" id=1]
-[ext_resource path="res://assets/audio/Night of Nights.ogg" type="AudioStream" id=2]
+[ext_resource type="Script" path="res://scenes/conductor/conductor.gd" id="1"]
 
 [node name="Conductor" type="AudioStreamPlayer"]
-stream = ExtResource( 2 )
-script = ExtResource( 1 )
+script = ExtResource("1")
 bpm = 180
+beat_offset = 1
 
 [connection signal="finished" from="." to="." method="_on_Conductor_finished"]
